@@ -1,28 +1,28 @@
 ### How Neural network is getting traineed using Backpropagation algorithm
 
--An example 3 layer neural network  is studied in the experiment.
--The neural network is consisting of 4 fully connected neurons in the input and the hidden layer. 
--Each of input layer and the hidden layer is with 2 neurons, and a final one output.
--2 weighted inputs  i1 & i2 are feed to the each of the neurons in the input layer.
--Each neuron uses sigmoid activation functions. 
- 
- ## Activation using Sigmoid 
-The general definition of is Sigmoid(x)= 1/(1+exp(-ax)) where a is the slope
-Graph of sigmoid function is S(slanted right) shaped. This is the most common activation function used .
-It is strictly increasing function, exhibiting a balance between linear and nonlinear behaviour. 
-The activation function helps to handle the nonlinearity of the data
+
+1. An example 3 layer neural network  is studied in the experiment as shown in the image below
+2. The neural network is consisting of 4 fully connected neurons in the input and the hidden layer. 
+3. Each of input layer and the hidden layer is with 2 neurons, and a final one output.
+4. 2 weighted inputs  i1 & i2 are feed to the each of the neurons in the input layer.
+5. Each neuron uses Sigmoid activation functions. 
+
+<p align="bottom" width="100%">
+    <img width="70%" src="https://github.com/Gitpabora/END2/blob/master/END2/S2/images/ANN1.png"> 
+</p>
+
+   #### Activation using Sigmoid 
+   The general definition of is Sigmoid(x)= 1/(1+exp(-ax)) where a is the slope
+   Graph of sigmoid function is S(slanted right) shaped. This is the most common activation function used .
+   It is strictly increasing function, exhibiting a balance between linear and nonlinear behaviour. 
+   The activation function helps to handle the nonlinearity of the data
+
+
 
 
 ### Mathematical basis 
-Weighted inputs are feed to the hidden layer nodes,this is represented by equation 1 and 2.
 
-The output of the hidden nodes are passed through sigmoid activation function to make the output non linear.This is represented by equation 3 and 4. 
-
-Weighted output of the activated hidden layer nodes are feed to output layer nodes,this is represented by equation 5 and 6.
-
-These outputs are then passed through sigmoid activation function to get the activated outputs.These are represented by equation 7 and 8.
-
-L2 loss is then calculated for each of the two outputs to get the model loss.This is represented by equation 9 and 10.
+The neural network is considered as a system where neurons are fully connected with weighted edges,the aim is to find the optimum values of weights in the edges , such that the deviation from the real ouput is minimum. Training the neural network is that the network is establised with the optimum numeric weights,such that it works as optimum approximator or predictor for the desired functionality.
 
 The mathematical equations are shown below.
 
