@@ -3,9 +3,7 @@
 ![Neural network](images/ANN.png)
  
 
-
 ###Activation 
-
 
 
 ### Mathematical basis 
