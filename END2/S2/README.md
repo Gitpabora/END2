@@ -105,18 +105,12 @@ Similarly we can find the partial derivative of *E_total* w.r.t
 - weight 3
 - weight 4
  
-##### After the gradient of E_total is found with respect to each weight, we can use equation 11 to update each weight.
+##### After the gradient of E_total is found with respect to each weight, the  equation 11 is used to update each weight for the next propagation.
 
-### A working example
+### Visualizing the results of the experiment using  numerical calculations in each step leveraging the formula features in  Excel 
 
-The network shown in the beginning is used to test the above solution and generate a plot of L2 loss across different epoch for different learning rate.A range of learning rate was used to check the behavior of the model , the result is summarized below.
+Weights were initialized heuristically, in random values  and  the fomulas are updated in the excel sheet. 
 
-### Visualizing the computations and weight adjustments in an Excel sheet
-
-Weights were initialized heuristically, in random values. 
-
-
-#### use of learning rate 
 
 ### Observations of changing learning rate in the experiment
 
