@@ -55,7 +55,7 @@ Equation 11  is for weight updates in susequent pass. With the aim to reduce the
 
 
 
-##### Use of Chain rule
+#### Use of Chain rule
 
 
 
@@ -78,11 +78,11 @@ In equation 12 we find the partial derivative of E_total w.r.t weight 5.Looking 
 - 'a_o1' is dependent on 'o1'.
 - 'o1' is dependent on 'w5'.
 
-##Similarly getting the  partial derivative of E_total w.r.t  Weight  W6 ,  W7 and  W8
+#### Similarly getting the  partial derivative of E_total w.r.t  Weight  W6 ,  W7 and  W8
 
 ![adjust weight 5 6 7 8](images/w_5_6_7_8.png) 
         
-##### Now  finding the partial derivative of E_total w.r.t 'w1'.There are two routes in the network
+#### Now  finding the partial derivative of E_total w.r.t 'w1'.There are two routes in the network
 
 ![path to weight 1](images/p_w1.png)  
 
@@ -101,7 +101,7 @@ Putting the equations 28 , 29 , 30 , 31 together we get the solution for eqution
 
 ![putting together](images/four_tog.png)
 
-Similarly the partial derivative of *E_total* w.r.t weights w2, w3, w4 are calculated
+#### Similarly the partial derivative of *E_total* w.r.t weights w2, w3, w4 are calculated
 
 | partial derivative    | calculations  |
 | ------------- | ------------- |
@@ -109,14 +109,14 @@ Similarly the partial derivative of *E_total* w.r.t weights w2, w3, w4 are calcu
 | of E_total w.r.t weight w3 | ∂E_t/ ∂w 3 = ((a_o1-t1)* (a_o1*(1-a_o1))*w6+(a_o2-t2)* (a_o2*(1-a_o2))*w8)* a_h2*(1-a_h2) *i1 |
 |  of E_total w.r.t weight w4        | ∂E_t/∂w4 = =((a_o1-t1)* (a_o1*(1-a_o1))*w6 +(a_o2-t2)* (a_o2*(1-a_o2))*w8)* a_h2*(1-a_h2) *i2 |
  
-##### After the gradient of E_total is found with respect to each weight, the  equation 11 is used to update each weight for the next propagation.
+#### After the gradient of E_total is found with respect to each weight, the  equation 11 is used to update each weight for the next propagation.
 
-### Visualizing the results of the experiment using  numerical calculations in each step leveraging the formula features in  Excel 
+#### Visualizing the results of the experiment using  numerical calculations in each step leveraging the formula features in  Excel 
 
 Weights were initialized heuristically, in random values  and  the fomulas are updated in the excel sheet. 
 
 
-### Observations of changing learning rate in the experiment
+#### Observations of changing learning rate in the experiment
 
 | Learning rate     | Total Error(286 th epock )   | observation |
 | ------------- | ------------- |-------|
@@ -128,7 +128,7 @@ Weights were initialized heuristically, in random values  and  the fomulas are u
 | 2.0       | .002  | converses faster than learning rate is 1.0 |
 
 
-### In case of this experiment as the learning rate increases the Total Error or loss is less  faster i.e  the model converses to minimal loss faster when learning rate is increasing , ie  the model learns  faster.
+#### In case of this experiment as the learning rate increases the Total Error or loss is less  faster i.e  the model converses to minimal loss faster when learning rate is increasing , ie  the model learns  faster.
 
 
 #### When learning rate is 0.1
