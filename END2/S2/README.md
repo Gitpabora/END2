@@ -118,7 +118,7 @@ Weights were initialized heuristically, in random values.
 
 #### use of learning rate 
 
-### observations of changing learning rate in the experiment
+### Observations of changing learning rate in the experiment
 
 | Learning rate     | Total Error(286 th epock )   | observation |
 | ------------- | ------------- |-------|
@@ -129,7 +129,7 @@ Weights were initialized heuristically, in random values.
 | 1.0   | .004 |  converses faster than learning rate is 0.8 |
 | 2.0       | .002  | converses faster than learning rate is 1.0 |
 
-
+###In case of this experiment as the learning rate increases the Total Error or loss is less  faster i.e  the model converses to minimal loss faster when learning rate is increasing , ie  the model learns  faster.
 #### When learning rate is 0.1
 
 
@@ -163,9 +163,6 @@ Weights were initialized heuristically, in random values.
  
 
 ![putting together](images/lr_2.png)
-
-
-	The model is converging faster and error is close to 0 after 76 epoch.
 
 
 
