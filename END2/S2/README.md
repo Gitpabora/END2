@@ -22,15 +22,33 @@
 
 ### Mathematical basis 
 
-The neural network is considered as a system where neurons are fully connected with weighted edges,the aim is to find the optimum values of weights in the edges , such that the deviation from the real ouput is minimum. Training the neural network is that the network is establised with the optimum numeric weights,such that it works as optimum approximator or predictor for the desired functionality.
+The neural network is considered as a system where neurons are fully connected with weighted edges,the aim is to find the optimum values of weights in the edges , such that the deviation from the real ouput is minimum. Training the neural network is that the network is establised with the optimum numeric weights,such that it works as optimum approximator or predictor for the desired functionality. The deviation at the final output layer is termed as loss , which is the total loss 
+in the two last edges in the diagram  E1 and E2 , E_Total = E1 + E2
 
-The mathematical equations are shown below.
+#### Forward propagation
+
+The inputs I1 and I2 are fed to the input layer. 
+The mathematical equations are shown below. 
 
 ![forward prop](images/fwprop.png) 
 
-As we can see from equation 5 and 6 , output is influenced by the weights.So to reduce the model loss as shown by equation 9 and 10 , we have to find a way to adjust the weights.This can be achieved by adjusting the weight w.r.t to the total error i.e by taking partial derivative of the error w.r.t w_i by keeping all other weights constant.The formula for adjusting the weight is given below.
 
 ![adjust weight](images/w_adjust.png)
+
+| Equation      | calculations  |
+| ------------- | ------------- |
+| 1 & 2         | the weighted inputs to the two neurons in th einput layer  |
+| 3 & 4   | the output of sigmoid activation from thetwo input neurons |
+| 5 & 6        |  calculates the weigted inputs to the 2nd layer neurons |
+| 3 & 4   | the output of sigmoid activation out of 2nd layer neurons |
+| 9 & 10   | the mean square error of the 2nd layer neurons output activation from the final expected target value |
+
+
+As we can see from equation 5 and 6 , output is influenced by the weights.So to reduce the model loss as shown by equation 9 and 10 , we have to find a way to adjust the weights.This can be achieved by adjusting the weight w.r.t to the total error i.e by taking partial derivative of the error w.r.t w_i by keeping all other weights constant.The formula for adjusting the weight is given below.
+
+
+
+
 
 The above formula is the foundation for carrying out back propagation in neural network.We will use the chain rule to find the partial derivative of error w.r.t each weight.
 
