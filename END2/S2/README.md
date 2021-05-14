@@ -33,7 +33,6 @@ The mathematical equations are shown below.
 ![forward prop](images/fwprop.png) 
 
 
-![adjust weight](images/w_adjust.png)
 
 | Equation      | calculations  |
 | ------------- | ------------- |
@@ -44,18 +43,20 @@ The mathematical equations are shown below.
 | 9 & 10   | the mean square error of the 2nd layer neurons output activation from the final expected target value |
 
 
-As we can see from equation 5 and 6 , output is influenced by the weights.So to reduce the model loss as shown by equation 9 and 10 , we have to find a way to adjust the weights.This can be achieved by adjusting the weight w.r.t to the total error i.e by taking partial derivative of the error w.r.t w_i by keeping all other weights constant.The formula for adjusting the weight is given below.
 
 
 
+#### Backward propagation
+![adjust weight](images/w_adjust.png)
+
+Equation 11  is for weight updates in susequent pass. With the aim to reduce the error E1 and E2 contributng to the complete loss for the system,a way is to adjust the contributing weights in the previous pass.
+ Mathematically ,this can be achieved by adjusting the weight w.r.t to the total error i.e by taking partial derivative  of the error w.r.t weight contributing.
 
 
-The above formula is the foundation for carrying out back propagation in neural network.We will use the chain rule to find the partial derivative of error w.r.t each weight.
 
-##### What is chain rule?
+##### Use of Chain rule
 
 
-#### Back propagation
 
 In this case we will start the partial derivation of Error from right side to left most side of the network.
   
@@ -119,34 +120,36 @@ Weights were initialized heuristically, in random values.
 
 ### observations of changing learning rate in the experiment
 
+| Learning rate     | Total Error(286 th epock )   | observation |
+| ------------- | ------------- |-------|
+| 0.1       | 0.62  | converses slowly |
+| 0.2  | .028  | converses faster than learning rate is 0.1 | 
+| 0.5      | .009   | converses faster than learning rate is 0.2| 
+| 0.8 | .005|  converses faster than learning rate is 0.5| 
+| 1.0   | .004 |  converses faster than learning rate is 0.8 |
+| 2.0       | .002  | converses faster than learning rate is 1.0 |
+
+
 #### When learning rate is 0.1
 
 
-![putting together](images/llr_point1.png)
+![putting together](images/lr_point1.png)
 
-	The model loss is 0.15 after 76 epoch , the model will take longer to converge.
 
 #### When learning rate is 0.2
 
-
 ![putting together](images/lr_point2.png)
-
-	The model loss is 0.1 after 76 epoch , the model will take longer to converge.
 
 
 #### When learning rate is 0.5
 
-
 ![putting together](images/lr_point5.png)
-
-	The model is learning better and the loss is 0.05 after 76 epoch , the gradient is no longer linear.
 
 
 #### When learning rate is 0.8
 
 ![putting together](images/lr_point8.png)
 
-	The model is now learning faster and loss is around 0.025 after 76 epoch.
 
 
 #### When learning rate is 1
@@ -154,8 +157,7 @@ Weights were initialized heuristically, in random values.
 
 ![putting together](images/lr_1.png)
 
-	The model behaves a little better than previous case and loss is 0.013 after 76 epoch.
-
+	
 
 #### When learning rate is 2
  
@@ -165,22 +167,6 @@ Weights were initialized heuristically, in random values.
 
 	The model is converging faster and error is close to 0 after 76 epoch.
 
-
-
-## Forward Pass
-![forward prop](images/fwd.png) 
-
-
-
-###
-![Neural network](images/lr_point1.png)
- 
-
-###Activation 
-
-
-
-## Backward Pass
 
 
 
