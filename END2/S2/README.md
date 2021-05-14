@@ -1,7 +1,7 @@
 ### How Neural network is getting traineed using Backpropagation algorithm
 
 
-1. An example 3 layer neural network  is studied in the experiment as shown in the image below
+1. An example 2 layer neural network  is studied in the experiment as shown in the image below
 2. The neural network is consisting of 4 fully connected neurons in the input and the hidden layer. 
 3. Each of input layer and the hidden layer is with 2 neurons, and a final one output.
 4. 2 weighted inputs  i1 & i2 are feed to the each of the neurons in the input layer.
@@ -62,6 +62,14 @@ In this case we will start the partial derivation of Error from right side to le
   
 ![adjust weight 5](images/w_5.png) 
 
+
+| Equation      | calculations  |
+| ------------- | ------------- |
+| 12        | to calculate the partial derivative of E_total   |
+| 13  | equation simplified using chain rule|
+| 14, 15, 16         | partial derivative for parts from the equation 13  is clculated|
+
+
 In equation 12 we find the partial derivative of E_total w.r.t weight 5.Looking at the network diagram , we see 
 
 
@@ -69,19 +77,11 @@ In equation 12 we find the partial derivative of E_total w.r.t weight 5.Looking 
 - 'a_o1' is dependent on 'o1'.
 - 'o1' is dependent on 'w5'.
 
-So based on chain rule we get equation 13.We can breakup equation 13 into three parts and find the partial derivative for each part as given by equation 14 , 15 , 16.
-
-Similarly we can find the partial derivative of E_total w.r.t 
-
-- weight 6
-- weight 7
-- weight 8
-
-The result is shown below
+##Similarly getting the  partial derivative of E_total w.r.t  Weight  W6 ,  W7 and  W8
 
 ![adjust weight 5 6 7 8](images/w_5_6_7_8.png) 
         
-##### Now we need to pause and think , how to find the partial derivative of E_total w.r.t 'w1'.There are two routes in the network
+##### Now  finding the partial derivative of E_total w.r.t 'w1'.There are two routes in the network
 
 ![path to weight 1](images/p_w1.png)  
 
@@ -89,9 +89,10 @@ Partial derivatives of the two routes are given below
 
 ![partial derivative weight 1](images/partial_drv_w1.png)
 
-When we embed equation 26 in equation 24 we get the partial derivative w.r.t route 21 , similarly when we embed equation 27 in equation 25 we get route 22.To get the resultant partial derivative of E_total w.r.t 'w1' we have to add the reult of equation 24 and 25.
+Using equation 26 in equation 24 we get the partial derivative w.r.t route of 21 , and using equation 27 in equation 25 partial derivate is calculated for  22.
+To get the resultant partial derivative of E_total w.r.t 'w1' the equation  24 and 25 are added.
 
-Solving the above parts we get the following equations
+Solving the above parts  following equations are arraived
 
 ![partcalculation](images/solving.png)
 
@@ -99,11 +100,13 @@ Putting the equations 28 , 29 , 30 , 31 together we get the solution for eqution
 
 ![putting together](images/four_tog.png)
 
-Similarly we can find the partial derivative of *E_total* w.r.t
+Similarly the partial derivative of *E_total* w.r.t weights w2, w3, w4 are calculated
 
-- weight 2
-- weight 3
-- weight 4
+| partial derivative    | calculations  |
+| ------------- | ------------- |
+| of E_total w.r.t weight w2  | ∂E_t/∂w2 = =((a_o1-t1)* (a_o1*(1-a_o1))*w5 +(a_o2-t2)* (a_o2*(1-a_o2))*w7)* a_h1*(1-a_h1) *i2  |
+| of E_total w.r.t weight w3 | ∂E_t/ ∂w 3 = ((a_o1-t1)* (a_o1*(1-a_o1))*w6+(a_o2-t2)* (a_o2*(1-a_o2))*w8)* a_h2*(1-a_h2) *i1 |
+|  of E_total w.r.t weight w4        | ∂E_t/∂w4 = =((a_o1-t1)* (a_o1*(1-a_o1))*w6 +(a_o2-t2)* (a_o2*(1-a_o2))*w8)* a_h2*(1-a_h2) *i2 |
  
 ##### After the gradient of E_total is found with respect to each weight, the  equation 11 is used to update each weight for the next propagation.
 
