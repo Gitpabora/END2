@@ -42,13 +42,14 @@ The mathematical equations are shown below.
 | 3 & 4   | the output of sigmoid activation out of 2nd layer neurons |
 | 9 & 10   | the mean square error of the 2nd layer neurons output activation from the final expected target value |
 
+The error and hence the loss is nonlinear function of the weight vector in the network the total error is contributed from the two directions out of the hidden layer. t1  and t2 are intialized to some random values  t1= 0.01 and  t2= 0.99
 
 
 
 
 #### Backward propagation
 ![adjust weight](images/w_adjust.png)
-
+	
 Equation 11  is for weight updates in susequent pass. With the aim to reduce the error E1 and E2 contributng to the complete loss for the system,a way is to adjust the contributing weights in the previous pass.
  Mathematically ,this can be achieved by adjusting the weight w.r.t to the total error i.e by taking partial derivative  of the error w.r.t weight contributing.
 
@@ -126,7 +127,10 @@ Weights were initialized heuristically, in random values  and  the fomulas are u
 | 1.0   | .004 |  converses faster than learning rate is 0.8 |
 | 2.0       | .002  | converses faster than learning rate is 1.0 |
 
-###In case of this experiment as the learning rate increases the Total Error or loss is less  faster i.e  the model converses to minimal loss faster when learning rate is increasing , ie  the model learns  faster.
+
+### In case of this experiment as the learning rate increases the Total Error or loss is less  faster i.e  the model converses to minimal loss faster when learning rate is increasing , ie  the model learns  faster.
+
+
 #### When learning rate is 0.1
 
 
