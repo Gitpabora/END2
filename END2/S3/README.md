@@ -1,19 +1,19 @@
-# Session 3
+## Session 3
 
-### Authors
+#### Authors
 
 * **Deepak Hazarika**
 * **Parinita Bora**
 * **Mohan Sai Srinivas Y**    
 
 
-# Build a neural network to add an image of a number and a number 
+## Build a neural network to add an image of a number and a number 
 
-## Abstract
+#### Abstract
 
 An convolution neural network is is used to process an image input to get the predicted number label.This predicted label and an integer between 0 - 9 is fed to 4 linear layers to get a 1x20 vector output.The index of the largest value is then used as the predicted sum of the 2 numbers.The predicted sum is then matched with actual sum of the 2 numbers , to calculate the loss and adjust the model weights iteratively.After few epochs the loss will reduce and predicted sum will converge with actual sum.
 
-## Data generation strategy 
+### Data generation strategy 
 
 ### Dataset :
 
