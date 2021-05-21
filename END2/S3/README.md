@@ -7,7 +7,8 @@
 * **Mohan Sai Srinivas Y**    
 
 
-## Build a neural network to add an image of a number and a number 
+## Problem  : Build a neural network to add an image of a number and a number 
+![nn image 0](images/Sum_network.png)
 
 #### Abstract
 
