@@ -13,12 +13,10 @@ A future project will be to tune the model using other hyper-parameters  like nu
 
 #### Data augmentation strategy
 
-#### Dataset :
+#### About the Dataset :
 
-- StanfordSentimentAnalysis dataset of movie reviews along with the labels
-	
-	- 11286 reviews with labels
-
+- The dataset StanfordSentimentAnalysis is of movie reviews along with the labels
+- There are 11286 reviews with labels
 - There are 5 categories of label
 
 | range of float value | integer label | Category |
