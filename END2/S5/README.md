@@ -1,30 +1,19 @@
-# Session 3
+### Session 3
 
-### Authors
-
-* **Deepak Hazarika** ,**Parinita Bora** ,**Mohan Sai Srinivas Y**    
-
-
-Thursday, 3 June 2021 
-----------
-
-# Assignmengt 
-1. [look at this code] (https://colab.research.google.com/drive/19wZi7P0Tzq9ZxeMz5EDmzfWFBLFWe6kN?usp=sharing&pli=1&authuser=3)It has additional details on "Back Translate", i.e. using Google translate to convert the sentences. It has "random_swap" function, as well as "random_delete". 
-2. Use "Back Translate", "random_swap" and "random_delete" to augment the data you are training on
-3. Download the StanfordSentimentAnalysis [Dataset from this link] (http://nlp.stanford.edu/~socherr/stanfordSentimentTreebank.zip)(it might be troubling to download it, so force download on chrome). Use "datasetSentences.txt" and "sentiment_labels.txt" files from the zip you just downloaded as your dataset. This dataset contains just over 10,000 pieces of Stanford data from HTML files of Rotten Tomatoes. The sentiments are rated between 1 and 25, where one is the most negative and 25 is the most positive.
-4. Train your model and achieve 60%+ validation/text accuracy. Upload your collab file on GitHub with readme that contains details about your assignment/word (minimum 250 words), training logs showing final validation accuracy, and outcomes for 10 example inputs from the test/validation data.
+#### Authors  **Deepak Hazarika** ,**Parinita Bora** ,**Mohan Sai Srinivas Y**    
+3 June 2021 
 
 
 
-## Abstract
+#### Assignmengt Abstract
 
 The StanfordSentimentAnalysis dataset is augmented by doing random swap, random deletion of words, translate the sentence to a random language and re-translate to english and substitute synonym in the sentence n number of times.This dataset is fed to a LSTM model with 2 layer to predict the label.
 The validation accuracy hovers around 62% after 20 epochs.The model was fine tuned by choosing different dropout rates, however it did not have much effect on the performance.
 A future project will be to tune the model using other hyper-parameters  like number of layers in the LSTM etc.
 
-## Data augmentation strategy
+#### Data augmentation strategy
 
-### Dataset :
+#### Dataset :
 
 - StanfordSentimentAnalysis dataset of movie reviews along with the labels
 	
@@ -40,7 +29,7 @@ A future project will be to tune the model using other hyper-parameters  like nu
 | 0.6 < value <= 0.8 | **3** | Positive |
 | 0.8 < value <= 1.0 | **4** | Very Positive |
 
-### A Class was created to handle data augmentation 
+#### A Class was created to handle data augmentation 
 
 
 #### Following API's are supported
@@ -166,7 +155,7 @@ A future project will be to tune the model using other hyper-parameters  like nu
 
     +  Output - modified sentence
 
-### Augmentation 
+#### Augmentation 
 
 The original dataset has 11286 review comments , four data augmentation methods 
 
@@ -177,7 +166,7 @@ The original dataset has 11286 review comments , four data augmentation methods
 
 are applied to increase the dataset size to 56430 records.The augmented dataset is then saved for use during model training/validation.
 
-### Model design
+#### Model design
  
 The model has
 
@@ -190,11 +179,11 @@ The model has
 
 **9,333,305** trainable parameters
 
-### Data split
+#### Data split
 
 The data was split into training and validation in the ratio of 85:15 using BucketIterator.
 
-## Model performance
+#### Model performance
 
 The model was run for 20 epochs , in the last epoch
 
@@ -209,7 +198,7 @@ A graph showing the plot of loss and accuracy across 20 epochs is shown below.
 ![Model loss](images/loss.png)
 
 
-## Model test output for ten record
+#### Model test output for ten record
 
 True label: negative
 
