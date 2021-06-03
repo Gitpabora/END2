@@ -34,127 +34,22 @@ A future project will be to tune the model using other hyper-parameters  like nu
 
 #### Following API's are supported
 
-| method | signature |
-1. **getLabelIndex(self , value)**
+|sl. |  method | details |  
+| --- | --- | --- |  
+| 1. | **getLabelIndex(self , value)** | Input : a float value ; Output : an integer label | 
+| 2.  | **getSentences(self)** | This method will load the datasetSentences file and extract   string id's ,  review comments ; store this in a dataframe| 
+| 3. | **getPhraseIds(self):** | This method will load the dictionary file and extract phrases , phrase ids ;    store this in a dictionary |
+| 4.| **getSentimentLabels(self)** | This method will load the sentiment_labels file and extract  phrases ids ,labels which are float value between 0 and 1 , including 0 and 1 ; store this in a dictionary |
+| 5. |  **getSentenceLabelsDF(self):** | This method finds label for the review comment --  go through the list of review comments +  check if the sentence exists as a phrase in the dictionary ; if yes then get the phrase id and find the label for the given phrase id in labels dictionary ; store the review comment and the label in a data frame object |
+| 6. |  **getSentenceandLabels(self)** | his is a wrapper function  calls  , getSentimentLabels() , getPhraseIds()     +  getSentences()  , getSentenceLabelsDF() ; The result is stored in a sentence label data frame |
+| 7. | **getSpacyTokens(self , sentence):** | This is a helper method to get spacy tokens of a sentence, a rule has been included to ignore apostrophe as a separate token., Input : Sentence ;   Output - tokens
+| 8. |  **random_deletion(self , sentence, p=0.3)** | This method randomly deletes words from a sentence based on a probability.If the probability is less then a threshold , then drop the word. ,  Input : Sentence , Output - modified sentence |
+| 9.| **random_swap(self , sentence, n=3):** | This method randomly swaps n number of words in a sentence. , Input : Sentence  ,  Output - modified sentence |
+| 10.| **getReTranslatedSentence(self , sentence):** | This method uses google translation package to translate the sentence to a random destination language, which is then retranslated to english.  Input : Sentence  , Output - modified sentence |
+| 11. | **removeStopWord(self, sentence):** | This method uses spacy token attributes to check if it is a stop word ;   If yes then drop the word    Input : Sentence ;  Output - modified sentence |
+| 12.| **insertSynonymNTimes(self , input , numTimes):** | This method is used to insert synonym for a word n number of times , this is a way to emphasise some words in the sentence.Wordnet library is used to get synonym for a word.The list of synonym is narrowed down based on domain.SInce these sentences are about movie , so the domain is set to celluloid etc.More about domain information can be found at domains - https://wndomains.fbk.eu/hierarchy.html  ;    Input : Sentence ; Output - modified sentence |
+| 13. |  **random_insertion(self , sentence, howmanytimes = 3):** | This is a wrapper method which call the removestop word and insertSynonymNTimes.   +  Input : Sentence ; Output - modified sentence |
 
-    Input : a float value
-  
-    Output : an integer label
-
-2. **getSentences(self)**
-
-    This method will load the datasetSentences file and extract 
-    
-    +  string id's
-
-    +  review comments
-
-    store this in a dataframe
-
-3. **getPhraseIds(self):**
-
-    This method will load the dictionary file and extract
-
-    +  phrases 
-
-    +  phrase ids
-
-    store this in a dictionary
-
-4.  **getSentimentLabels(self)**
-
-    This method will load the sentiment_labels file and extract
-
-    +  phrases ids 
-
-    +  labels which are float value between 0 and 1 , including 0 and 1
-
-    store this in a dictionary
-
-5.  **getSentenceLabelsDF(self):**
-
-    This method finds label for the review comment , the algorithm for the same is given below:
-
-    +  go through the list of review comments
-
-    +  check if the sentence exists as a phrase in the dictionary
-
-      +  if yes then get the phrase id and find the label for the given phrase id in labels dictionary
-
-    store the review comment and the label in a data frame object
-
-6.  **getSentenceandLabels(self)**
-
-    This is a wrapper function which call
-
-    +  getSentimentLabels()
-
-    +  getPhraseIds()
-    
-    +  getSentences()
-
-    +  getSentenceLabelsDF()
-
-    The result is stored in a sentence label data frame
-
-7.  **getSpacyTokens(self , sentence):**
-
-    This is a helper method to get spacy tokens of a sentence, a rule has been included to ignore apostrophe as a separate token.
-
-    +  Input : Sentence
-
-    +  Output - tokens
-
-
-8.  **random_deletion(self , sentence, p=0.3)**
-
-    This method randomly deletes words from a sentence based on a probability.If the probability is less then a threshold , then drop the word.
-
-    +  Input : Sentence
-
-    +  Output - modified sentence
-
-9.  **random_swap(self , sentence, n=3):**
-
-    This method randomly swaps n number of words in a sentence.
-
-    +  Input : Sentence
-
-    +  Output - modified sentence
-
-10. **getReTranslatedSentence(self , sentence):**
-
-    This method uses google translation package to translate the sentence to a random destination language, which is then retranslated to english.
-
-    +  Input : Sentence
-
-    +  Output - modified sentence
-
-11. **removeStopWord(self, sentence):**
-
-    This method uses spacy token attributes to check if it is a stop word
-
-    +  If yes then drop the word
-
-    +  Input : Sentence
-
-    +  Output - modified sentence
-
-12. **insertSynonymNTimes(self , input , numTimes):**
-
-    This method is used to insert synonym for a word n number of times , this is a way to emphasise some words in the sentence.Wordnet library is used to get synonym for a word.The list of synonym is narrowed down based on domain.SInce these sentences are about movie , so the domain is set to celluloid etc.More about domain information can be found at domains - https://wndomains.fbk.eu/hierarchy.html
-
-    +  Input : Sentence
-
-    +  Output - modified sentence
-
-13. **random_insertion(self , sentence, howmanytimes = 3):**
-
-    This is a wrapper method which call the removestop word and insertSynonymNTimes.
-
-    +  Input : Sentence
-
-    +  Output - modified sentence
 
 #### Augmentation 
 
@@ -165,7 +60,7 @@ The original dataset has 11286 review comments , four data augmentation methods
 +  random insertion
 +  retranslate to english using google translate
 
-are applied to increase the dataset size to 56430 records.The augmented dataset is then saved for use during model training/validation.
+These augmentation is applied to increase the dataset size to 56430 records.The augmented dataset is then saved and  used for training the model and in validation.
 
 #### Model design
  
