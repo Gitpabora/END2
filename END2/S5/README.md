@@ -1,14 +1,14 @@
-### Session 3
+### Session 5
 
-#### Authors  **Deepak Hazarika** ,**Parinita Bora** ,**Mohan Sai Srinivas Y**    
+Authors- Deepak Hazarika ,Parinita Bora ,Mohan Sai Srinivas Y    
 3 June 2021 
 
 
 
 #### Assignmengt Abstract
 
-The StanfordSentimentAnalysis dataset is augmented by doing random swap, random deletion of words, translate the sentence to a random language and re-translate to english and substitute synonym in the sentence n number of times.This dataset is fed to a LSTM model with 2 layer to predict the label.
-The validation accuracy hovers around 62% after 20 epochs.The model was fine tuned by choosing different dropout rates, however it did not have much effect on the performance.
+The StanfordSentimentAnalysis dataset is augmented by doing random swap, random deletion of words, translate the sentence to a random language and re-translate to english and substitute synonym in the sentence n number of times.
+This dataset is fed to a LSTM model with 2 layer to predict the label. The validation accuracy is around 62% after 20 epochs.The model was fine tuned by choosing different dropout rates, however it did not have much effect on the performance.
 A future project will be to tune the model using other hyper-parameters  like number of layers in the LSTM etc.
 
 #### Data augmentation strategy
@@ -34,6 +34,7 @@ A future project will be to tune the model using other hyper-parameters  like nu
 
 #### Following API's are supported
 
+| method | signature |
 1. **getLabelIndex(self , value)**
 
     Input : a float value
