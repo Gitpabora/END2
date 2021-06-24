@@ -3,16 +3,13 @@
 
 ### Authors
 
-* **Deepak Hazarika**
-* **Parinita Bora**
-* **Mohan Sai Srinivas Y**    
-
+Deepak Hazarika,Parinita Bora, Mohan Sai Srinivas Y,     
 Thursday, 17 June 2021
 ----------
 
 This readme is in 2 parts 
 
-# Part a 
+## Part a 
 
 ## Sentiment analysis of StanfordSentimentAnalysis Dataset
 
