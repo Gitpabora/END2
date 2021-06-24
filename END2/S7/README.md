@@ -1,17 +1,17 @@
 
-# Session 7
+### Session 7
 
 ### Authors
 
-Deepak Hazarika,Parinita Bora, Mohan Sai Srinivas Y,     
-Thursday, 17 June 2021
-----------
+   Deepak Hazarika,Parinita Bora, Mohan Sai Srinivas Y,     
+   Thursday, 17 June 2021
+    
 
 This readme is in 2 parts 
 
 ## Part a 
 
-## Sentiment analysis of StanfordSentimentAnalysis Dataset
+### Sentiment analysis of StanfordSentimentAnalysis Dataset
 
 ### Abstract
 
@@ -500,9 +500,9 @@ The model was run for 10 epochs , in the last epoch
 
 A graph showing the plot of loss and accuracy across 10 epochs is shown below.
 
-![Model PPL](QA/images/Q2_QA/PPL.png)
+![Model PPL](Q2_QA/images/QA/PPL.png)
   
-![Model loss](QA/images/Q2_QA/loss.png)
+![Model loss](Q2_QA/images/QA/loss.png)
 
 2. Quora dataset
 
