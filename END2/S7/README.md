@@ -503,9 +503,9 @@ The model was run for 10 epochs , in the last epoch
 
 A graph showing the plot of loss and accuracy across 10 epochs is shown below.
 
-![Model PPL](QA/images/QA/PPL.png)
+![Model PPL](QA/images/Q2_QA/PPL.png)
   
-![Model loss](QA/images/QA/loss.png)
+![Model loss](QA/images/Q2_QA/loss.png)
 
 2. Quora dataset
 
