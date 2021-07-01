@@ -1,11 +1,9 @@
 ### Session 8
 
-####Authors
+#### Authors
+Deepak Hazarika, Parinita Bora, Mohan Sai Srinivas;  
+  Thursday, 1 July 2021
 
-Deepak Hazarika,Parinita Bora,Mohan Sai Srinivas 
-
-Thursday, 1 July 2021
-----------
 
 ### Abstract
 
@@ -167,94 +165,90 @@ Try embedding bag in decoder to check model performance
 
 ### Training logs 
 
-Model 1
-
-* A dump of log is given below for reference
-
+#### Model 1
 Epoch: 02 | Time: 0m 1s
 	Train Loss: 0.021 | Train PPL:   1.021
 	 Val. Loss: 4.635 |  Val. PPL: 103.032
------------------------------------------------------------
+
 Epoch: 03 | Time: 0m 0s
 	Train Loss: 0.010 | Train PPL:   1.010
 	 Val. Loss: 3.097 |  Val. PPL:  22.141
------------------------------------------------------------
+
 Epoch: 04 | Time: 0m 0s
 	Train Loss: 0.008 | Train PPL:   1.008
 	 Val. Loss: 6.322 |  Val. PPL: 556.820
------------------------------------------------------------
+
 Epoch: 05 | Time: 0m 0s
 	Train Loss: 0.014 | Train PPL:   1.014
 	 Val. Loss: 1.440 |  Val. PPL:   4.220
------------------------------------------------------------
+
 Epoch: 06 | Time: 0m 0s
 	Train Loss: 0.004 | Train PPL:   1.004
 	 Val. Loss: 2.182 |  Val. PPL:   8.861
------------------------------------------------------------
+
 Epoch: 07 | Time: 0m 0s
 	Train Loss: 0.005 | Train PPL:   1.005
 	 Val. Loss: 1.534 |  Val. PPL:   4.637
------------------------------------------------------------
+
 Epoch: 08 | Time: 0m 0s
 	Train Loss: 0.004 | Train PPL:   1.004
 	 Val. Loss: 2.433 |  Val. PPL:  11.397
------------------------------------------------------------
+
 Epoch: 09 | Time: 0m 0s
 	Train Loss: 0.004 | Train PPL:   1.004
 	 Val. Loss: 1.005 |  Val. PPL:   2.732
------------------------------------------------------------
+
 Epoch: 10 | Time: 0m 0s
 	Train Loss: 0.003 | Train PPL:   1.003
 	 Val. Loss: 0.765 |  Val. PPL:   2.150
------------------------------------------------------------
+
 Epoch: 11 | Time: 0m 0s
 	Train Loss: 0.002 | Train PPL:   1.002
 	 Val. Loss: 2.084 |  Val. PPL:   8.040
------------------------------------------------------------
 
 
-Model 2
 
-Epoch: 02 | Time: 0m 1s
+#### Model 2
+
+| Epoch: 02 | Time: 0m 1s
 	Train Loss: 0.021 | Train PPL:   1.021
 	 Val. Loss: 4.940 |  Val. PPL: 139.819
------------------------------------------------------------
+
 Epoch: 03 | Time: 0m 1s
 	Train Loss: 0.011 | Train PPL:   1.011
 	 Val. Loss: 2.518 |  Val. PPL:  12.398
------------------------------------------------------------
+
 Epoch: 04 | Time: 0m 0s
 	Train Loss: 0.007 | Train PPL:   1.007
 	 Val. Loss: 4.678 |  Val. PPL: 107.510
------------------------------------------------------------
+
 Epoch: 05 | Time: 0m 1s
 	Train Loss: 0.010 | Train PPL:   1.010
 	 Val. Loss: 2.499 |  Val. PPL:  12.172
------------------------------------------------------------
+
 Epoch: 06 | Time: 0m 0s
 	Train Loss: 0.005 | Train PPL:   1.005
 	 Val. Loss: 3.140 |  Val. PPL:  23.105
------------------------------------------------------------
+
 Epoch: 07 | Time: 0m 0s
 	Train Loss: 0.009 | Train PPL:   1.009
 	 Val. Loss: 1.414 |  Val. PPL:   4.111
------------------------------------------------------------
+
 Epoch: 08 | Time: 0m 1s
 	Train Loss: 0.004 | Train PPL:   1.004
 	 Val. Loss: 2.089 |  Val. PPL:   8.081
------------------------------------------------------------
+
 Epoch: 09 | Time: 0m 0s
 	Train Loss: 0.005 | Train PPL:   1.005
 	 Val. Loss: 1.975 |  Val. PPL:   7.206
------------------------------------------------------------
+
 Epoch: 10 | Time: 0m 1s
 	Train Loss: 0.005 | Train PPL:   1.005
 	 Val. Loss: 2.922 |  Val. PPL:  18.580
------------------------------------------------------------
+
 Epoch: 11 | Time: 0m 1s
 	Train Loss: 0.005 | Train PPL:   1.006
 	 Val. Loss: 1.188 |  Val. PPL:   3.281
------------------------------------------------------------
 
 ## Summary
 
